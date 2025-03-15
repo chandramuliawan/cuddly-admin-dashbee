@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <div class="mainContainer">
+        <div class="header">
+            <div class="topSearch">
+                <label for="searchBar"><img src="./icons/magnify.svg" alt="searchBar" id="searchIcon"></label>
+                <input type="text" name="searchBar" id="searchBar">
+            </div>
+            <div class="topUserSetting">
+                <img src="./icons/bell-ring-outline.svg" alt="notifications" id="notificationIcon">
+                <img src="./img/charlesdeluvio-Mv9hjnEUHR4-unsplash(1).jpg" alt="profilePicture" id="profPicIcon">
+                <span id="userName">Morgan Oackley</span>
+            </div>
+            <div class="headerBottom">
+                <div class="bottomGreetings">
+                    <img src="./img/charlesdeluvio-Mv9hjnEUHR4-unsplash(1).jpg" alt="profilePicture" id="profilePicture">
+                    <span>Hi there, <br>MorganOackley (@morgan)</span>
+                </div>
+                <div class="bottomButtons">
+                    <button class="button btnNew">New</button>
+                    <button class="button btnUpload">Upload</button>
+                    <button class="button btnShare">Share</button>
+                </div>
+            </div>
+        </div>
+        <div class="fixed">
+            <div class="sidebar">
+                <div class="sideTitle sideFlex">
+                    <img src="./icons/view-dashboard.svg" alt="dashboardIcon" class="sideIcons" id="dashboardIcon">
+                    <span id="Dashboard">Dashboard</span>
+                </div>
+                <div class="sideMenu">
+                    <div class="sideMenuHome">
+                        <a href="#" class="sideFlex" id="home"><img src="icons/home.svg" alt="homeIcon" class="sideIcons" id="homeIcon">Home</a>
+                    </div>
+                    <div class="sideMenuProfile">
+                        <a href="#" class="sideFlex" id="profile"><img src="icons/card-account-details.svg" alt="accountIcon" class="sideIcons" id="accountIcon">
+                            Profile</a>
+                    </div>
+                    <div class="sideMenuMessages">
+                        <a href="#" class="sideFlex" id="messages"><img src="icons/message.svg" alt="messageIcon" class="sideIcons" id="messageIcon">
+                            Messages</a>
+                    </div>
+                    <div class="sideMenuHistroy">
+                        <a href="#" class="sideFlex" id="history"><img src="icons/history.svg" alt="historyIcon" class="sideIcons" id="historyIcon">
+                            History</a>
+                    </div>
+                    <div class="sideMenuTasks">
+                        <a href="#" class="sideFlex" id="tasks"><img src="icons/file-multiple.svg" alt="tasksIcon" class="sideIcons" id="tasksIcon">
+                            Tasks</a>
+                    </div>
+                    <div class="sideMenuCommunity">
+                        <a href="#" class="sideFlex" id="community"><img src="icons/account-group.svg" alt="communityIcon" class="sideIcons" id="communityIcon">
+                            Community</a>
+                    </div>
+                </div>
+                <div class="sideSettings">
+                    <div class="sideSettingsSetting">
+                        <a href="#" class="sideFlex" id="sideSettings"><img src="icons/cog.svg" alt="settingIcon" class="sideIcons" id="settingIcon">
+                            Settings</a>
+                    </div>
+                    <div class="sideSettingsSupport">
+                        <a href="#" class="sideFlex" id="support"><img src="icons/tooltip-question.svg" alt="supportIcon" class="sideIcons" id="supportIcon">
+                            Support</a>
+                    </div>
+                    <div class="sideSettingsPrivacy sideFlex">
+                        <a href="#" class="sideFlex" id="privacy"><img src="icons/shield-account.svg" alt="privacyIcon" class="sideIcons" id="privacyIcon">
+                            Privacy</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="main">
+            <div class="mainProjects">
+                <div class="yourProjectsTitle biggerHeader">Your Projects</div>
+                <div class="mainProjectsContainer">
+                    <div class="projectCards">
+                        <div class="smallerHeader">Super Cool Project</div>
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aspernatur accusamus repellat ullam cumque temporibus consequuntur reprehenderit suscipit similique quam magnam ipsa id fugit eveniet voluptatem quis, saepe porro consectetur ratione?</p>
+                        <div class="controlBtnContainer">
+                            <div id="checkIcon">
+                                <img src="./icons/check-outline.svg" alt="check" class="actionIcons">
+                                <span class="CSStooltip">Toggle the project status</span>
+                            </div>
+                            <div id="seeMoreIcon">
+                                <img src="./icons/eye-plus-outline.svg" alt="seeMore" class="actionIcons">
+                                <span class="CSStooltip">Look at the project details</span>
+                            </div>
+                            <div id="seeOnlineIcon">
+                                <img src="./icons/hub-outline.svg" alt="seeOnline" class="actionIcons">
+                                <span class="CSStooltip">Open project in GitHub</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="projectCards"> 
+                        <div class="smallerHeader">Less Cool Project</div>
+                        <p>Sit commodi rerum delectus tempora voluptates? Minus, esse praesentium. Incidunt, sit odio! Vero porro, beatae laborum minima, nulla cupiditate adipisci excepturi ullam voluptatum sed, saepe doloribus voluptatibus ut libero quaerat?</p>
+                        <div class="controlBtnContainer">
+                            <div id="checkIcon">
+                                <img src="./icons/check-outline.svg" alt="check" class="actionIcons">
+                                <span class="CSStooltip">Toggle the project status</span>
+                            </div>
+                            <div id="seeMoreIcon">
+                                <img src="./icons/eye-plus-outline.svg" alt="seeMore" class="actionIcons">
+                                <span class="CSStooltip">Look at the project details</span>
+                            </div>
+                            <div id="seeOnlineIcon">
+                                <img src="./icons/hub-outline.svg" alt="seeOnline" class="actionIcons">
+                                <span class="CSStooltip">Open project in GitHub</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="projectCards">
+                        <div class="smallerHeader">Impossibiru Apps</div>
+                        <p>Eaque, rerum et. Esse quo, obcaecati quisquam laboriosam repellat, tempore quia repellendus ducimus iste hic quis libero harum natus sequi explicabo laborum debitis rerum. Velit illum optio esse doloremque non.</p>
+                        <div class="controlBtnContainer">
+                            <div id="checkIcon">
+                                <img src="./icons/check-outline.svg" alt="check" class="actionIcons">
+                                <span class="CSStooltip">Toggle the project status</span>
+                            </div>
+                            <div id="seeMoreIcon">
+                                <img src="./icons/eye-plus-outline.svg" alt="seeMore" class="actionIcons">
+                                <span class="CSStooltip">Look at the project details</span>
+                            </div>
+                            <div id="seeOnlineIcon">
+                                <img src="./icons/hub-outline.svg" alt="seeOnline" class="actionIcons">
+                                <span class="CSStooltip">Open project in GitHub</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="projectCards">
+                        <div class="smallerHeader">Less Impossible Apps</div>
+                        <p>Illo, tenetur. Maiores quis cumque quos, explicabo, sunt ducimus possimus sed et in facere illo sequi dicta harum ratione minus eos tempore. Accusantium quos laboriosam error ducimus atque at esse.</p>
+                        <div class="controlBtnContainer">
+                            <div id="checkIcon">
+                                <img src="./icons/check-outline.svg" alt="check" class="actionIcons">
+                                <span class="CSStooltip">Toggle the project status</span>
+                            </div>
+                            <div id="seeMoreIcon">
+                                <img src="./icons/eye-plus-outline.svg" alt="seeMore" class="actionIcons">
+                                <span class="CSStooltip">Look at the project details</span>
+                            </div>
+                            <div id="seeOnlineIcon">
+                                <img src="./icons/hub-outline.svg" alt="seeOnline" class="actionIcons">
+                                <span class="CSStooltip">Open project in GitHub</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="projectCards">
+                        <div class="smallerHeader">Ad Blocker (IMPORTANT)</div>
+                        <p>Delectus ullam mollitia inventore! Pariatur laboriosam cupiditate iure vel facere ipsam perferendis provident quas autem! Cum libero quis saepe magnam quaerat quos iusto. Quaerat consectetur modi iure, quas reiciendis ad?</p>
+                        <div class="controlBtnContainer">
+                            <div id="checkIcon">
+                                <img src="./icons/check-outline.svg" alt="check" class="actionIcons">
+                                <span class="CSStooltip">Toggle the project status</span>
+                            </div>
+                            <div id="seeMoreIcon">
+                                <img src="./icons/eye-plus-outline.svg" alt="seeMore" class="actionIcons">
+                                <span class="CSStooltip">Look at the project details</span>
+                            </div>
+                            <div id="seeOnlineIcon">
+                                <img src="./icons/hub-outline.svg" alt="seeOnline" class="actionIcons">
+                                <span class="CSStooltip">Open project in GitHub</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="projectCards">
+                        <div class="smallerHeader">Money Maker</div>
+                        <p>Veritatis laboriosam consequuntur maiores ipsum qui, ipsa et ex vero, officia enim quam asperiores? Excepturi alias sed consequatur, maiores omnis delectus ab saepe accusantium officia, hic quasi, rem reprehenderit minima!</p>
+                        <div class="controlBtnContainer">
+                            <div id="checkIcon">
+                                <img src="./icons/check-outline.svg" alt="check" class="actionIcons">
+                                <span class="CSStooltip">Toggle the project status</span>
+                            </div>
+                            <div id="seeMoreIcon">
+                                <img src="./icons/eye-plus-outline.svg" alt="seeMore" class="actionIcons">
+                                <span class="CSStooltip">Look at the project details</span>
+                            </div>
+                            <div id="seeOnlineIcon">
+                                <img src="./icons/hub-outline.svg" alt="seeOnline" class="actionIcons">
+                                <span class="CSStooltip">Open project in GitHub</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="mainAnnouncements">
+                <div class="announcementTitle biggerHeader">Announcements</div>
+                <div class="announcementContainer">
+                    <div class="announcementItems announcementItems1">
+                        <div class="smallerHeader">Site Maintenance</div>
+                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Maiores rem molestias placeat? Qui nulla officiis fugit. Vitae aliquid ea asperiores suscipit sequi impedit veniam laborum repellat aspernatur natus. Adipisci, quaerat.</p>                        
+                    </div>
+                    <div class="announcementItems announcementItems2">
+                        <div class="smallerHeader">Community Share Day</div>
+                        <p>Ab in fugit, praesentium quasi commodi rem sint nihil voluptates aspernatur nisi harum adipisci aliquam dolor nobis modi. Modi dolore nihil alias animi accusamus quod iste vitae, culpa rem fugit!</p>
+                    </div>
+                    <div class="announcementItems announcementItems3">
+                        <div class="smallerHeader">Updated Privacy Policy</div>
+                        <p>Fuga rem nostrum qui ex, doloremque officiis mollitia eligendi eius unde aspernatur cupiditate at corporis! Saepe sapiente, veritatis maiores sunt et doloremque aperiam, numquam atque esse tempora magni vitae amet!</p>
+                    </div>
+                </div>
+            </div>
+            <div class="mainTrending">
+                <div class="trendingTitle biggerHeader">Trendings</div>
+                <div class="trendingContainer">
+                    <div class="trendingItems1"></div>
+                    <div class="trendingItems2"></div>
+                    <div class="trendingItems3"></div>
+                    <div class="trendingItems4"></div>
+                </div>
+            </div>
+        </div>
+    </div>    
+</body>
+</html>

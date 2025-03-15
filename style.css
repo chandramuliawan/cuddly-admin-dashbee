@@ -1,0 +1,461 @@
+/* css reset */
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default padding */
+ul[class],
+ol[class] {
+  padding: 0;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul[class],
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a class attribute */
+ul[class],
+ol[class] {
+  list-style: none;
+}
+
+/* A elements get default styles */
+a{
+    text-decoration-skip-ink: auto;
+    text-decoration: none;
+  }
+
+/* Make images easier to work with */
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* end of css reset */
+
+
+/* grid and flex - container styling, includes alignment and paddings */
+
+.mainContainer {
+    display: grid;
+    grid-template-columns: 1fr 5fr;
+    grid-template-areas:
+    "sidebar header"
+    "sidebar main";
+}
+
+.header {
+    grid-area: header;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+
+    row-gap: 16px;
+
+    padding: 16px 48px;
+}
+
+.topSearch {
+    grid-column: 1;
+}
+
+
+.headerBottom {
+    display: flex;
+}
+
+
+.topSearch,
+.bottomGreetings {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.bottomButtons,
+.topUserSetting {
+    margin-left: auto;
+    align-items: center;
+    padding: 8px;
+
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.headerBottom {
+    grid-column: 1/span 2;
+}
+
+#searchBar {
+    width: 100%;
+}
+
+.fixed {
+    grid-area: sidebar;
+    min-width: 240px ;
+    height: 100%;
+}
+
+.sidebar {
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    align-self: start;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 48px;
+
+    padding-top: 16px;
+    padding-left: 16px;
+}
+
+.sideFlex {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+    margin-bottom: 8px;
+}
+
+.main {
+    grid-area: main;
+
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas:
+    "project announcement"
+    "project trending";
+
+    padding: 16px 32px 16px 8px;
+}
+
+.mainProjects {
+    grid-area: project;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+
+    padding-top: 32px;
+    padding-left: 16px;
+    padding-right: 16px;
+}
+
+.mainProjectsContainer {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-auto-rows: 1fr;
+    gap: 16px;
+}
+
+.projectCards {
+    display: flex;
+    flex-direction: column;
+
+    padding: 1rem;
+    gap: 1rem;
+    border-radius: 8px;
+    width: min(75ch,100%);
+    height: min(450px,100%);
+
+
+    border-left: 8px solid var(--borderColour)
+}
+
+.projectCards p {
+    max-height: 3rem;
+    overflow-y: hidden;
+    text-overflow: ellipsis;
+}
+
+.controlBtnContainer {
+    display: flex;
+    gap: 8px;
+    margin-left: auto;
+    margin-top: 8px;
+}
+
+.mainAnnouncements {
+    grid-area: announcement;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+
+    padding-top: 32px;
+}
+
+.announcementContainer {
+    display: flex;
+    flex-direction: column;
+
+    justify-content: space-between;
+
+    gap: 16px;
+    
+    padding: 16px;
+
+    border-radius: 8px;
+}
+
+/* adding border between flex items, only from the first and the last items though */
+
+.announcementContainer::before {
+    content: "";
+    border: 1px solid #d3d3d3;
+    align-self: stretch;
+}
+
+.announcementContainer::after {
+    content: "";
+    border: 1px solid #d3d3d3;
+    align-self: stretch;
+}
+
+.announcementItems {
+    flex: 1;
+}
+.announcementItems1 {
+    order: -1;
+}
+.announcementItems3 {
+    order :1;
+}
+
+
+.announcementContainer p{
+    padding: 8px 0px;
+    height: 4rem;
+    overflow-y:hidden;
+    text-overflow:ellipsis;
+}
+
+.mainTrending {
+    grid-area: trending;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+
+    padding-top: 32px;
+
+}
+
+.trendingContainer {
+    display: flex;
+    flex-direction: column;
+
+    justify-content: space-between;
+
+    gap: 16px;
+    
+    padding: 16px;
+
+    border-radius: 8px;
+}
+
+
+
+/* styling on colours, fonts and buttons and suchs */
+
+.roboto-mainFonts {
+    font-family: "Roboto", sans-serif;
+    font-optical-sizing: auto;
+    /* font-weight: <weight>; */
+    font-style: normal;
+    font-variation-settings:
+      "wdth" 100;
+  }
+
+
+:root {
+    --mainColour : rgb(0, 161, 215);
+    --mainColourDark :  rgb(0, 112, 150);
+    --borderColour: rgb(255,103,64);
+    --borderHighlight : #ff4040;
+    --backgroundColour : gainsboro;
+}
+
+body {
+    font-family: "Roboto",sans-serif;
+}
+
+
+.header {
+    box-shadow: 0px 5px 50px 0px rgba(0,0,0,0.8);
+}
+
+.fixed {
+    background-color: var(--mainColour);
+    color: #fff;
+}
+
+.sidebar a:visited {
+    color: inherit;
+}
+
+.sidebar a:hover {
+    text-decoration: underline;
+    filter: brightness(80%);
+}
+
+.button {
+    width: 100px;
+    height: 36px;
+    border-radius: 15px;
+    border-style: none;
+    background-color: var(--mainColour);
+    color: #fff;
+}
+
+.button:hover {
+    background-color: var(--mainColourDark);
+    font-weight: bold;
+
+}
+
+#searchBar {
+    background-color: lightgray;
+    border-style: none;
+    border-radius: 15px;
+    height: 32px;
+    padding: 16px;
+}
+
+.smallerHeader {
+    margin-bottom: 4px;
+    font-weight: bold;
+}
+
+.biggerHeader {
+    margin-bottom: 8px;
+    font-weight: bolder;
+    font-size: larger;
+}
+
+.sideTitle{
+    font-size: xx-large;
+    font-weight: bolder;
+}
+
+.sideMenu,
+.sideSettings {
+    font-size: x-large;
+    font-weight: bold;
+}
+
+.main {
+    background-color: var(--backgroundColour);
+}
+
+
+.projectCards {
+    box-shadow: 0px 0px 50px 0px rgba(0,0,0,0.4);
+    background-color: #fff;
+}
+
+.projectCards:hover,
+.projectCards:focus{
+    outline: 1px solid var(--borderHighlight);
+    border-color: var(--borderHighlight);
+    /* transition-duration:90ms; */
+}
+
+p {
+    color: gray;
+}
+
+.announcementContainer,
+.trendingContainer {
+    background-color: #fff;
+}
+
+.actionIcons {
+    width: 20px;
+    height: 20px;
+    filter: invert(75%) sepia(0%) saturate(39%) hue-rotate(170deg) brightness(90%) contrast(93%);
+}
+
+.actionIcons:hover,
+.actionIcons:focus {
+    filter: invert(47%) sepia(77%) saturate(4539%) hue-rotate(335deg) brightness(99%) contrast(107%);
+}
+
+.sideIcons {
+    width: 30px;
+    height: 30px;
+    filter: invert(100%) sepia(100%) saturate(1%) hue-rotate(214deg) brightness(107%) contrast(101%);;
+}
+
+#dashboardIcon {
+    width: 40px;
+    height: 40px;
+}
+
+#searchIcon,
+#notificationIcon {
+    width: 25px;
+    height: 25px;
+}
+
+#profPicIcon{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+#profilePicture{
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+}
+
+
+/* tooltip related css (trial) */
+
+/* Tooltip text */
+.CSStooltip {
+    visibility: hidden;
+    width: 120px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    padding: 5px 0;
+    border-radius: 6px;
+   
+    /* Position the tooltip text - see examples below! */
+    position: absolute;
+    z-index: 1;
+  }
+
+  #checkIcon:hover .CSStooltip,
+  #seeMoreIcon:hover .CSStooltip,
+  #seeOnlineIcon:hover .CSStooltip{ 
+    visibility: visible;
+  }
